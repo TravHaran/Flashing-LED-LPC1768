@@ -35,7 +35,7 @@ The LandTiger LPC17XX board features 4 switches: Key1 (SW4), Key2 (SW3), INT0 (S
 
 A picture and the functionality of each switche is shown below:
 
-<img width="300" alt="LED" src="https://user-images.githubusercontent.com/40522456/58438644-d3043580-809d-11e9-8a11-ddfd6ace8df8.PNG">
+<img width="350" alt="LED" src="https://user-images.githubusercontent.com/40522456/58438644-d3043580-809d-11e9-8a11-ddfd6ace8df8.PNG">
 
 
 | **Key type** | **Description** | **Comment** |
@@ -46,6 +46,26 @@ A picture and the functionality of each switche is shown below:
 | RESET|Manual Reset|SW1|
 
 ### B(2) - Joystick
+The LandTiger LPC17XX board features a 5 way digital joystick (SW5). Each direction (up, down, left, right) and the Select function are connected to a dedicated digital input pin on the LPC17XX. Multiple keys can be pressed at the same time (e.g. up and right). 
+A picture of the joystick is shown below:
 
+<img width="350" alt="LED" src="https://user-images.githubusercontent.com/40522456/58441063-e66acd00-80ac-11e9-8581-baf90a151b80.PNG">
 
+The board schematic for the joystick is shown below:
+
+<img width="390" alt="LED" src="https://user-images.githubusercontent.com/40522456/58440915-cedf1480-80ab-11e9-8137-6973782bd999.PNG">
+
+From the picture:
+* We can see the 5 pins are connected to **GPIO Port 1**.
+* The input pins are **active low** when a key is pressed. If a button is pressed, we will read a **0** value at the pin.
+
+A table of the 5 pins is shown below:
+
+| **IO Pin** | **Description** |
+| :--- |:---|
+|P1.25|Select (Active Low)|
+|P1.26|Down (Active Low)|
+|P1.27|Left (Active Low)|
+|P1.28|Right (Active Low)|
+|P1.29|Up (Active Low)|
 
